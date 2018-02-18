@@ -1,0 +1,87 @@
+<!-- SASS file: scss/app/single-post.scss -->
+<ion-view hide-nav-bar="true" view-title="Single Post">
+  <ion-content>
+    <div class="single-post">
+      <!-- Back button. Binds to goBackAction() in controllers.js -->
+      <i class="ion-android-arrow-back mg-back-button" ng-click="goBackAction()"></i>
+
+      <!-- Main Image. An overlay is applied. refer to scss/single-post.scss -->
+      <img src="img/feed-img-1.jpg" class="feed-image">
+
+      <!-- Title. This is positioned from the bottom -->
+      <div class="app-feed-title">
+        <h1 class="primary-font bold-weight post-title animated fadeInUp">ENCONTRO DAS TRIBOS</h1>
+        <!-- Post Social Stats
+        <h6 class="light-weight animated fadeInDown">55 Comentários | 88 likes | 32 Shares</h6> -->
+      </div>
+
+      <!-- Post Category. Rotated. refer to scss/single-post.scss -->
+      <h6 class="app-feed-category divider divider-text-right secondary-font semi-bold">São Paulo / SP</h6>
+
+      <!-- Post Date and Month -->
+      <div  class="app-feed-date animated fadeIn">
+        <h2 class="primary-font bold-weight">23</h2>
+        <h6 class="primary-font light-weight">Março 2018</h6>
+      </div>
+
+    </div>
+
+    <!-- Content Section -->
+    <div class="post-content">
+      <!-- Actual content starts here -->
+      <p>Aqui vai uma explicação do evento etc</p>
+    
+      <!-- Actual content ends here -->
+
+     
+    </div>
+    <!-- End Content Section -->
+
+<div class="list card">
+
+  <div class="item item-avatar"> 
+
+    <h2><i class="icon ion-pricetags"></i> R$ 1.200,00 </h2>
+    <p>(camarote + vip bebidas)</p>
+  </div>
+
+
+  
+
+
+
+</div>
+<div class="row">
+  <div class="col"><button class="button button-large button-positive">
+  +
+</button></div>
+  <div class="col"><input type="number" value="1"></div>
+  <div class="col"><button class="button button-large button-positive">
+  -
+</button></div>
+</div>
+
+    <!-- Related Articles -->
+    <div class="mini-post-section">
+
+     <!-- Title of section -->
+     <h6 class="mini-post-section--title">COMPRAR INGRESSOS</h6>
+
+ 
+  
+
+     <!-- List -->
+     <ion-list class="mini-post-list">
+       <!-- Singular Item -->
+      <a class="item item-thumbnail-left">
+        <img src="img/feed-img-1.jpg">
+        <h1 class="primary-font">R$ 1.200,00</h1>
+      </a>
+ 
+
+     </ion-list>
+     <!-- End List -->
+    </div>
+    <!-- End related Articles -->
+  </ion-content>
+</ion-view>
