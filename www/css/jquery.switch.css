@@ -17,6 +17,8 @@
 	 */
   .switch-light {
     display: block;
+	white-space:nowrap;
+	direction:ltr;
     height: 30px;
 	width:100px;
     /* Outline the toggles when the inputs are focused

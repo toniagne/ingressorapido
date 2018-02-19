@@ -1,2 +1,313 @@
-<!-- JS OBFUSCATED ONLY IN THE DEMO TO AVOID COPY -->
-var _0xe7e2=["\x73\x68\x6F\x77\x6E\x2E\x62\x73\x2E\x63\x6F\x6C\x6C\x61\x70\x73\x65","\x70\x72\x6F\x74\x6F\x74\x79\x70\x65","\x66\x6F\x72\x45\x61\x63\x68","\x6C\x65\x6E\x67\x74\x68","\x63\x61\x6C\x6C","\x4B\x69\x6E\x67\x20\x46\x6F\x6F\x64","\x69\x6D\x67\x2F\x74\x68\x75\x6D\x62\x5F\x6D\x61\x70\x5F\x32\x2E\x6A\x70\x67","\x4C\x6F\x72\x65\x6D\x20\x49\x70\x73\x75\x6D\x20\x69\x73\x20\x73\x69\x6D\x70\x6C\x79\x20\x64\x75\x6D\x6D\x79\x20\x74\x65\x78\x74\x20\x6F\x66\x20\x74\x68\x65\x20\x70\x72\x69\x6E\x74\x69\x6E\x67\x20\x61\x6E\x64\x20\x74\x79\x70\x65\x73\x65\x74\x74\x69\x6E\x67\x20\x69\x6E\x64\x75\x73\x74\x72\x79\x2E","","\x2B\x33\x39\x33\x34\x32\x34\x35\x32\x35\x35","\x73\x69\x6E\x67\x6C\x65\x5F\x72\x65\x73\x74\x61\x75\x72\x61\x6E\x74\x2E\x68\x74\x6D\x6C","\x42\x65\x6C\x6C\x61\x20\x4E\x61\x70\x6F\x6C\x69","\x44\x72\x61\x67\x6F\x6E\x20\x54\x6F\x77\x65\x72","\x43\x68\x69\x6E\x61\x20\x66\x6F\x6F\x64\x20","\x43\x68\x69\x6E\x61\x20\x66\x6F\x6F\x64","\x53\x65\x61\x46\x6F\x6F\x64","\x4D\x61\x64\x6C\x65\x6E\x65\x20\x42\x61\x72","\x41\x6C\x66\x72\x65\x64\x6F","\x53\x74\x2E\x20\x47\x65\x72\x6D\x61\x69\x6E","\x6D\x61\x70\x73","\x52\x4F\x41\x44\x4D\x41\x50","\x4D\x61\x70\x54\x79\x70\x65\x49\x64","\x44\x52\x4F\x50\x44\x4F\x57\x4E\x5F\x4D\x45\x4E\x55","\x4D\x61\x70\x54\x79\x70\x65\x43\x6F\x6E\x74\x72\x6F\x6C\x53\x74\x79\x6C\x65","\x4C\x45\x46\x54\x5F\x43\x45\x4E\x54\x45\x52","\x43\x6F\x6E\x74\x72\x6F\x6C\x50\x6F\x73\x69\x74\x69\x6F\x6E","\x54\x4F\x50\x5F\x52\x49\x47\x48\x54","\x4C\x41\x52\x47\x45","\x5A\x6F\x6F\x6D\x43\x6F\x6E\x74\x72\x6F\x6C\x53\x74\x79\x6C\x65","\x54\x4F\x50\x5F\x4C\x45\x46\x54","\x4C\x45\x46\x54\x5F\x54\x4F\x50","\x6C\x61\x6E\x64\x73\x63\x61\x70\x65","\x23\x46\x46\x42\x42\x30\x30","\x72\x6F\x61\x64\x2E\x68\x69\x67\x68\x77\x61\x79","\x23\x46\x46\x43\x32\x30\x30","\x72\x6F\x61\x64\x2E\x61\x72\x74\x65\x72\x69\x61\x6C","\x23\x46\x46\x30\x33\x30\x30","\x72\x6F\x61\x64\x2E\x6C\x6F\x63\x61\x6C","\x77\x61\x74\x65\x72","\x23\x30\x30\x37\x38\x46\x46","\x70\x6F\x69","\x23\x30\x30\x46\x46\x36\x41","\x6D\x61\x70","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x6C\x6F\x63\x61\x74\x69\x6F\x6E\x5F\x6C\x61\x74\x69\x74\x75\x64\x65","\x6C\x6F\x63\x61\x74\x69\x6F\x6E\x5F\x6C\x6F\x6E\x67\x69\x74\x75\x64\x65","\x69\x6D\x67\x2F\x70\x69\x6E\x73\x2F","\x2E\x70\x6E\x67","\x75\x6E\x64\x65\x66\x69\x6E\x65\x64","\x70\x75\x73\x68","\x63\x6C\x69\x63\x6B","\x6F\x70\x65\x6E","\x73\x65\x74\x43\x65\x6E\x74\x65\x72","\x61\x64\x64\x4C\x69\x73\x74\x65\x6E\x65\x72","\x65\x76\x65\x6E\x74","\x73\x65\x74\x4D\x61\x70","\x72\x65\x6D\x6F\x76\x65","\x64\x69\x76\x2E\x69\x6E\x66\x6F\x42\x6F\x78","\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x6D\x61\x72\x6B\x65\x72\x5F\x69\x6E\x66\x6F\x22\x20\x69\x64\x3D\x22\x6D\x61\x72\x6B\x65\x72\x5F\x69\x6E\x66\x6F\x22\x3E","\x3C\x69\x6D\x67\x20\x73\x72\x63\x3D\x22","\x6D\x61\x70\x5F\x69\x6D\x61\x67\x65\x5F\x75\x72\x6C","\x22\x20\x61\x6C\x74\x3D\x22\x49\x6D\x61\x67\x65\x22\x2F\x3E","\x3C\x68\x33\x3E","\x6E\x61\x6D\x65\x5F\x70\x6F\x69\x6E\x74","\x3C\x2F\x68\x33\x3E","\x3C\x73\x70\x61\x6E\x3E","\x64\x65\x73\x63\x72\x69\x70\x74\x69\x6F\x6E\x5F\x70\x6F\x69\x6E\x74","\x3C\x2F\x73\x70\x61\x6E\x3E","\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x6D\x61\x72\x6B\x65\x72\x5F\x74\x6F\x6F\x6C\x73\x22\x3E","\x3C\x66\x6F\x72\x6D\x20\x61\x63\x74\x69\x6F\x6E\x3D\x22\x68\x74\x74\x70\x3A\x2F\x2F\x6D\x61\x70\x73\x2E\x67\x6F\x6F\x67\x6C\x65\x2E\x63\x6F\x6D\x2F\x6D\x61\x70\x73\x22\x20\x6D\x65\x74\x68\x6F\x64\x3D\x22\x67\x65\x74\x22\x20\x74\x61\x72\x67\x65\x74\x3D\x22\x5F\x62\x6C\x61\x6E\x6B\x22\x20\x73\x74\x79\x6C\x65\x3D\x22\x64\x69\x73\x70\x6C\x61\x79\x3A\x69\x6E\x6C\x69\x6E\x65\x2D\x62\x6C\x6F\x63\x6B\x22\x22\x3E\x3C\x69\x6E\x70\x75\x74\x20\x6E\x61\x6D\x65\x3D\x22\x73\x61\x64\x64\x72\x22\x20\x76\x61\x6C\x75\x65\x3D\x22","\x67\x65\x74\x5F\x64\x69\x72\x65\x63\x74\x69\x6F\x6E\x73\x5F\x73\x74\x61\x72\x74\x5F\x61\x64\x64\x72\x65\x73\x73","\x22\x20\x74\x79\x70\x65\x3D\x22\x68\x69\x64\x64\x65\x6E\x22\x3E\x3C\x69\x6E\x70\x75\x74\x20\x74\x79\x70\x65\x3D\x22\x68\x69\x64\x64\x65\x6E\x22\x20\x6E\x61\x6D\x65\x3D\x22\x64\x61\x64\x64\x72\x22\x20\x76\x61\x6C\x75\x65\x3D\x22","\x2C","\x22\x3E\x3C\x62\x75\x74\x74\x6F\x6E\x20\x74\x79\x70\x65\x3D\x22\x73\x75\x62\x6D\x69\x74\x22\x20\x76\x61\x6C\x75\x65\x3D\x22\x47\x65\x74\x20\x64\x69\x72\x65\x63\x74\x69\x6F\x6E\x73\x22\x20\x63\x6C\x61\x73\x73\x3D\x22\x62\x74\x6E\x5F\x69\x6E\x66\x6F\x62\x6F\x78\x5F\x67\x65\x74\x5F\x64\x69\x72\x65\x63\x74\x69\x6F\x6E\x73\x22\x3E\x44\x69\x72\x65\x63\x74\x69\x6F\x6E\x73\x3C\x2F\x62\x75\x74\x74\x6F\x6E\x3E\x3C\x2F\x66\x6F\x72\x6D\x3E","\x3C\x61\x20\x68\x72\x65\x66\x3D\x22\x74\x65\x6C\x3A\x2F\x2F","\x70\x68\x6F\x6E\x65","\x22\x20\x63\x6C\x61\x73\x73\x3D\x22\x62\x74\x6E\x5F\x69\x6E\x66\x6F\x62\x6F\x78\x5F\x70\x68\x6F\x6E\x65\x22\x3E","\x3C\x2F\x61\x3E","\x3C\x2F\x64\x69\x76\x3E","\x3C\x61\x20\x68\x72\x65\x66\x3D\x22","\x75\x72\x6C\x5F\x70\x6F\x69\x6E\x74","\x22\x20\x63\x6C\x61\x73\x73\x3D\x22\x62\x74\x6E\x5F\x69\x6E\x66\x6F\x62\x6F\x78\x22\x3E\x44\x65\x74\x61\x69\x6C\x73\x3C\x2F\x61\x3E","\x35\x70\x78\x20\x2D\x32\x30\x70\x78\x20\x32\x70\x78\x20\x32\x70\x78","\x68\x74\x74\x70\x3A\x2F\x2F\x77\x77\x77\x2E\x67\x6F\x6F\x67\x6C\x65\x2E\x63\x6F\x6D\x2F\x69\x6E\x74\x6C\x2F\x65\x6E\x5F\x75\x73\x2F\x6D\x61\x70\x66\x69\x6C\x65\x73\x2F\x63\x6C\x6F\x73\x65\x2E\x67\x69\x66","\x66\x6C\x6F\x61\x74\x50\x61\x6E\x65","\x6F\x6E","\x23\x63\x6F\x6C\x6C\x61\x70\x73\x65\x4D\x61\x70"];$(_0xe7e2[86])[_0xe7e2[85]](_0xe7e2[0],function(_0x54d0x1){(function(_0x54d0x2){if(!Array[_0xe7e2[1]][_0xe7e2[2]]){_0x54d0x2[_0xe7e2[2]]= _0x54d0x2[_0xe7e2[2]]|| function(_0x54d0x3,_0x54d0x4){for(var _0x54d0x5=0,_0x54d0x6=this[_0xe7e2[3]];_0x54d0x5< _0x54d0x6;_0x54d0x5++){if(_0x54d0x5 in  this){_0x54d0x3[_0xe7e2[4]](_0x54d0x4,this[_0x54d0x5],_0x54d0x5,this)}}}}})(Array[_0xe7e2[1]]);var _0x54d0x7,_0x54d0x8=[],_0x54d0x9={"\x46\x61\x73\x74\x66\x6F\x6F\x64":[{name:_0xe7e2[5],location_latitude:48.873792,location_longitude:2.295028,map_image_url:_0xe7e2[6],name_point:_0xe7e2[5],description_point:_0xe7e2[7],get_directions_start_address:_0xe7e2[8],phone:_0xe7e2[9],url_point:_0xe7e2[10]}],"\x50\x69\x7A\x7A\x61":[{name:_0xe7e2[11],location_latitude:48.865633,location_longitude:2.321236,map_image_url:_0xe7e2[6],name_point:_0xe7e2[11],description_point:_0xe7e2[7],get_directions_start_address:_0xe7e2[8],phone:_0xe7e2[9],url_point:_0xe7e2[10]}],"\x43\x68\x69\x6E\x65\x73\x65":[{name:_0xe7e2[12],location_latitude:48.863893,location_longitude:2.342348,map_image_url:_0xe7e2[6],name_point:_0xe7e2[12],description_point:_0xe7e2[7],get_directions_start_address:_0xe7e2[8],phone:_0xe7e2[9],url_point:_0xe7e2[10]},{name:_0xe7e2[13],location_latitude:48.860642,location_longitude:2.352245,map_image_url:_0xe7e2[6],name_point:_0xe7e2[14],description_point:_0xe7e2[7],get_directions_start_address:_0xe7e2[8],phone:_0xe7e2[9],url_point:_0xe7e2[10]}],"\x46\x69\x73\x68":[{name:_0xe7e2[15],location_latitude:48.858370,location_longitude:2.294481,map_image_url:_0xe7e2[6],name_point:_0xe7e2[15],description_point:_0xe7e2[7],get_directions_start_address:_0xe7e2[8],phone:_0xe7e2[9],url_point:_0xe7e2[10]}],"\x42\x61\x72":[{name:_0xe7e2[16],location_latitude:48.858370,location_longitude:2.294481,map_image_url:_0xe7e2[6],name_point:_0xe7e2[16],description_point:_0xe7e2[7],get_directions_start_address:_0xe7e2[8],phone:_0xe7e2[9],url_point:_0xe7e2[10]}],"\x49\x6E\x74\x65\x72\x6E\x61\x74\x69\x6F\x6E\x61\x6C":[{name:_0xe7e2[17],location_latitude:48.860819,location_longitude:2.354507,map_image_url:_0xe7e2[6],name_point:_0xe7e2[17],description_point:_0xe7e2[7],get_directions_start_address:_0xe7e2[8],phone:_0xe7e2[9],url_point:_0xe7e2[10]},{name:_0xe7e2[18],location_latitude:48.853798,location_longitude:2.333328,map_image_url:_0xe7e2[6],name_point:_0xe7e2[18],description_point:_0xe7e2[7],get_directions_start_address:_0xe7e2[8],phone:_0xe7e2[9],url_point:_0xe7e2[10]}]};var _0x54d0xa={zoom:14,center: new google[_0xe7e2[19]].LatLng(48.865633,2.321236),mapTypeId:google[_0xe7e2[19]][_0xe7e2[21]][_0xe7e2[20]],mapTypeControl:false,mapTypeControlOptions:{style:google[_0xe7e2[19]][_0xe7e2[23]][_0xe7e2[22]],position:google[_0xe7e2[19]][_0xe7e2[25]][_0xe7e2[24]]},panControl:false,panControlOptions:{position:google[_0xe7e2[19]][_0xe7e2[25]][_0xe7e2[26]]},zoomControl:true,zoomControlOptions:{style:google[_0xe7e2[19]][_0xe7e2[28]][_0xe7e2[27]],position:google[_0xe7e2[19]][_0xe7e2[25]][_0xe7e2[29]]},scrollwheel:false,scaleControl:false,scaleControlOptions:{position:google[_0xe7e2[19]][_0xe7e2[25]][_0xe7e2[29]]},streetViewControl:true,streetViewControlOptions:{position:google[_0xe7e2[19]][_0xe7e2[25]][_0xe7e2[30]]},styles:[{"\x66\x65\x61\x74\x75\x72\x65\x54\x79\x70\x65":_0xe7e2[31],"\x73\x74\x79\x6C\x65\x72\x73":[{"\x68\x75\x65":_0xe7e2[32]},{"\x73\x61\x74\x75\x72\x61\x74\x69\x6F\x6E":43.400000000000006},{"\x6C\x69\x67\x68\x74\x6E\x65\x73\x73":37.599999999999994},{"\x67\x61\x6D\x6D\x61":1}]},{"\x66\x65\x61\x74\x75\x72\x65\x54\x79\x70\x65":_0xe7e2[33],"\x73\x74\x79\x6C\x65\x72\x73":[{"\x68\x75\x65":_0xe7e2[34]},{"\x73\x61\x74\x75\x72\x61\x74\x69\x6F\x6E":-61.8},{"\x6C\x69\x67\x68\x74\x6E\x65\x73\x73":45.599999999999994},{"\x67\x61\x6D\x6D\x61":1}]},{"\x66\x65\x61\x74\x75\x72\x65\x54\x79\x70\x65":_0xe7e2[35],"\x73\x74\x79\x6C\x65\x72\x73":[{"\x68\x75\x65":_0xe7e2[36]},{"\x73\x61\x74\x75\x72\x61\x74\x69\x6F\x6E":-100},{"\x6C\x69\x67\x68\x74\x6E\x65\x73\x73":51.19999999999999},{"\x67\x61\x6D\x6D\x61":1}]},{"\x66\x65\x61\x74\x75\x72\x65\x54\x79\x70\x65":_0xe7e2[37],"\x73\x74\x79\x6C\x65\x72\x73":[{"\x68\x75\x65":_0xe7e2[36]},{"\x73\x61\x74\x75\x72\x61\x74\x69\x6F\x6E":-100},{"\x6C\x69\x67\x68\x74\x6E\x65\x73\x73":52},{"\x67\x61\x6D\x6D\x61":1}]},{"\x66\x65\x61\x74\x75\x72\x65\x54\x79\x70\x65":_0xe7e2[38],"\x73\x74\x79\x6C\x65\x72\x73":[{"\x68\x75\x65":_0xe7e2[39]},{"\x73\x61\x74\x75\x72\x61\x74\x69\x6F\x6E":-13.200000000000003},{"\x6C\x69\x67\x68\x74\x6E\x65\x73\x73":2.4000000000000057},{"\x67\x61\x6D\x6D\x61":1}]},{"\x66\x65\x61\x74\x75\x72\x65\x54\x79\x70\x65":_0xe7e2[40],"\x73\x74\x79\x6C\x65\x72\x73":[{"\x68\x75\x65":_0xe7e2[41]},{"\x73\x61\x74\x75\x72\x61\x74\x69\x6F\x6E":-1.0989010989011234},{"\x6C\x69\x67\x68\x74\x6E\x65\x73\x73":11.200000000000017},{"\x67\x61\x6D\x6D\x61":1}]}]};var _0x54d0xb;_0x54d0x7=  new google[_0xe7e2[19]].Map(document[_0xe7e2[43]](_0xe7e2[42]),_0x54d0xa);for(var _0x54d0xc in _0x54d0x9){_0x54d0x9[_0x54d0xc][_0xe7e2[2]](function(_0x54d0xd){_0x54d0xb=  new google[_0xe7e2[19]].Marker({position: new google[_0xe7e2[19]].LatLng(_0x54d0xd[_0xe7e2[44]],_0x54d0xd[_0xe7e2[45]]),map:_0x54d0x7,icon:_0xe7e2[46]+ _0x54d0xc+ _0xe7e2[47]});if(_0xe7e2[48]===  typeof _0x54d0x8[_0x54d0xc]){_0x54d0x8[_0x54d0xc]= []};_0x54d0x8[_0x54d0xc][_0xe7e2[49]](_0x54d0xb);google[_0xe7e2[19]][_0xe7e2[54]][_0xe7e2[53]](_0x54d0xb,_0xe7e2[50],(function(){_0x54d0xf();_0x54d0x10(_0x54d0xd)[_0xe7e2[51]](_0x54d0x7,this);_0x54d0x7[_0xe7e2[52]]( new google[_0xe7e2[19]].LatLng(_0x54d0xd[_0xe7e2[44]],_0x54d0xd[_0xe7e2[45]]))}))})};function _0x54d0xe(){for(var _0x54d0xc in _0x54d0x8){_0x54d0x8[_0x54d0xc][_0xe7e2[2]](function(_0x54d0xb){_0x54d0xb[_0xe7e2[55]](null)})}}function _0x54d0xf(){$(_0xe7e2[57])[_0xe7e2[56]]()}function _0x54d0x10(_0x54d0xd){return  new InfoBox({content:_0xe7e2[58]+ _0xe7e2[59]+ _0x54d0xd[_0xe7e2[60]]+ _0xe7e2[61]+ _0xe7e2[62]+ _0x54d0xd[_0xe7e2[63]]+ _0xe7e2[64]+ _0xe7e2[65]+ _0x54d0xd[_0xe7e2[66]]+ _0xe7e2[67]+ _0xe7e2[68]+ _0xe7e2[69]+ _0x54d0xd[_0xe7e2[70]]+ _0xe7e2[71]+ _0x54d0xd[_0xe7e2[44]]+ _0xe7e2[72]+ _0x54d0xd[_0xe7e2[45]]+ _0xe7e2[73]+ _0xe7e2[74]+ _0x54d0xd[_0xe7e2[75]]+ _0xe7e2[76]+ _0x54d0xd[_0xe7e2[75]]+ _0xe7e2[77]+ _0xe7e2[78]+ _0xe7e2[79]+ _0x54d0xd[_0xe7e2[80]]+ _0xe7e2[81]+ _0xe7e2[78],disableAutoPan:false,maxWidth:0,pixelOffset: new google[_0xe7e2[19]].Size(10,125),closeBoxMargin:_0xe7e2[82],closeBoxURL:_0xe7e2[83],isHidden:false,alignBottom:true,pane:_0xe7e2[84],enableEventPropagation:true})}})
+$('#collapseMap').on('shown.bs.collapse', function(e){
+	(function(A) {
+
+	if (!Array.prototype.forEach)
+		A.forEach = A.forEach || function(action, that) {
+			for (var i = 0, l = this.length; i < l; i++)
+				if (i in this)
+					action.call(that, this[i], i, this);
+			};
+
+		})(Array.prototype);
+
+		var
+		mapObject,
+		markers = [],
+		markersData = {
+			'Fastfood': [
+			{
+				name: 'King Food',
+				location_latitude: 48.873792, 
+				location_longitude: 2.295028,
+				map_image_url: 'img/thumb_map_2.jpg',
+				name_point: 'King Food',
+				description_point: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+				get_directions_start_address: '',
+				phone: '+3934245255',
+				url_point: 'single_restaurant.html'
+			}
+			],
+			'Pizza': [
+			{
+				name: 'Bella Napoli',
+				location_latitude: 48.865633, 
+				location_longitude: 2.321236,
+				map_image_url: 'img/thumb_map_2.jpg',
+				name_point: 'Bella Napoli',
+				description_point: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+				get_directions_start_address: '',
+				phone: '+3934245255',
+				url_point: 'single_restaurant.html'
+			}
+			],
+			'Chinese': [
+			{
+				name: 'Dragon Tower',
+				location_latitude: 48.863893, 
+				location_longitude: 2.342348,
+				map_image_url: 'img/thumb_map_2.jpg',
+				name_point: 'Dragon Tower',
+				description_point: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+				get_directions_start_address: '',
+				phone: '+3934245255',
+				url_point: 'single_restaurant.html'
+			},
+			{
+				name: 'China food ',
+				location_latitude: 48.860642,
+				location_longitude: 2.352245,
+				map_image_url: 'img/thumb_map_2.jpg',
+				name_point: 'China food',
+				description_point: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+				get_directions_start_address: '',
+				phone: '+3934245255',
+				url_point: 'single_restaurant.html'
+			}
+			],
+			'Fish': [
+			{
+				name: 'SeaFood',
+				location_latitude: 48.858370, 
+				location_longitude: 2.294481,
+				map_image_url: 'img/thumb_map_2.jpg',
+				name_point: 'SeaFood',
+				description_point: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+				get_directions_start_address: '',
+				phone: '+3934245255',
+				url_point: 'single_restaurant.html'
+			}
+			],
+			'Bar': [
+			{
+				name: 'Madlene Bar',
+				location_latitude: 48.858370, 
+				location_longitude: 2.294481,
+				map_image_url: 'img/thumb_map_2.jpg',
+				name_point: 'Madlene Bar',
+				description_point: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+				get_directions_start_address: '',
+				phone: '+3934245255',
+				url_point: 'single_restaurant.html'
+			}
+			],
+			'International': [
+			{
+				name: 'Alfredo',
+				location_latitude: 48.860819, 
+				location_longitude: 2.354507,
+				map_image_url: 'img/thumb_map_2.jpg',
+				name_point: 'Alfredo',
+				description_point: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+				get_directions_start_address: '',
+				phone: '+3934245255',
+				url_point: 'single_restaurant.html'
+			},
+			{
+				name: 'St. Germain',
+				location_latitude: 48.853798,
+				location_longitude: 2.333328,
+				map_image_url: 'img/thumb_map_2.jpg',
+				name_point: 'St. Germain',
+				description_point: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+				get_directions_start_address: '',
+				phone: '+3934245255',
+				url_point: 'single_restaurant.html'
+			}
+			]
+
+		};
+
+			var mapOptions = {
+				zoom: 14,
+				center: new google.maps.LatLng(48.865633, 2.321236),
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+
+				mapTypeControl: false,
+				mapTypeControlOptions: {
+					style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+					position: google.maps.ControlPosition.LEFT_CENTER
+				},
+				panControl: false,
+				panControlOptions: {
+					position: google.maps.ControlPosition.TOP_RIGHT
+				},
+				zoomControl: true,
+				zoomControlOptions: {
+					style: google.maps.ZoomControlStyle.LARGE,
+					position: google.maps.ControlPosition.TOP_LEFT
+				},
+				scrollwheel: false,
+				scaleControl: false,
+				scaleControlOptions: {
+					position: google.maps.ControlPosition.TOP_LEFT
+				},
+				streetViewControl: true,
+				streetViewControlOptions: {
+					position: google.maps.ControlPosition.LEFT_TOP
+				},
+				styles: [
+											 {
+					"featureType": "landscape",
+					"stylers": [
+						{
+							"hue": "#FFBB00"
+						},
+						{
+							"saturation": 43.400000000000006
+						},
+						{
+							"lightness": 37.599999999999994
+						},
+						{
+							"gamma": 1
+						}
+					]
+				},
+				{
+					"featureType": "road.highway",
+					"stylers": [
+						{
+							"hue": "#FFC200"
+						},
+						{
+							"saturation": -61.8
+						},
+						{
+							"lightness": 45.599999999999994
+						},
+						{
+							"gamma": 1
+						}
+					]
+				},
+				{
+					"featureType": "road.arterial",
+					"stylers": [
+						{
+							"hue": "#FF0300"
+						},
+						{
+							"saturation": -100
+						},
+						{
+							"lightness": 51.19999999999999
+						},
+						{
+							"gamma": 1
+						}
+					]
+				},
+				{
+					"featureType": "road.local",
+					"stylers": [
+						{
+							"hue": "#FF0300"
+						},
+						{
+							"saturation": -100
+						},
+						{
+							"lightness": 52
+						},
+						{
+							"gamma": 1
+						}
+					]
+				},
+				{
+					"featureType": "water",
+					"stylers": [
+						{
+							"hue": "#0078FF"
+						},
+						{
+							"saturation": -13.200000000000003
+						},
+						{
+							"lightness": 2.4000000000000057
+						},
+						{
+							"gamma": 1
+						}
+					]
+				},
+				{
+					"featureType": "poi",
+					"stylers": [
+						{
+							"hue": "#00FF6A"
+						},
+						{
+							"saturation": -1.0989010989011234
+						},
+						{
+							"lightness": 11.200000000000017
+						},
+						{
+							"gamma": 1
+						}
+					]
+				}
+				]
+			};
+			var
+			marker;
+			mapObject = new google.maps.Map(document.getElementById('map'), mapOptions);
+			for (var key in markersData)
+				markersData[key].forEach(function (item) {
+					marker = new google.maps.Marker({
+						position: new google.maps.LatLng(item.location_latitude, item.location_longitude),
+						map: mapObject,
+						icon: 'img/pins/' + key + '.png',
+					});
+
+					if ('undefined' === typeof markers[key])
+						markers[key] = [];
+					markers[key].push(marker);
+					google.maps.event.addListener(marker, 'click', (function () {
+      closeInfoBox();
+      getInfoBox(item).open(mapObject, this);
+      mapObject.setCenter(new google.maps.LatLng(item.location_latitude, item.location_longitude));
+     }));
+
+	});
+	
+		function hideAllMarkers () {
+			for (var key in markers)
+				markers[key].forEach(function (marker) {
+					marker.setMap(null);
+				});
+		};
+
+		function closeInfoBox() {
+			$('div.infoBox').remove();
+		};
+
+		function getInfoBox(item) {
+			return new InfoBox({
+				content:
+				'<div class="marker_info" id="marker_info">' +
+				'<img src="' + item.map_image_url + '" alt="Image"/>' +
+				'<h3>'+ item.name_point +'</h3>' +
+				'<span>'+ item.description_point +'</span>' +
+				'<div class="marker_tools">' +
+				'<form action="http://maps.google.com/maps" method="get" target="_blank" style="display:inline-block""><input name="saddr" value="'+ item.get_directions_start_address +'" type="hidden"><input type="hidden" name="daddr" value="'+ item.location_latitude +',' +item.location_longitude +'"><button type="submit" value="Get directions" class="btn_infobox_get_directions">Directions</button></form>' +
+					'<a href="tel://'+ item.phone +'" class="btn_infobox_phone">'+ item.phone +'</a>' +
+					'</div>' +
+					'<a href="'+ item.url_point + '" class="btn_infobox">Details</a>' +
+				'</div>',
+				disableAutoPan: false,
+				maxWidth: 0,
+				pixelOffset: new google.maps.Size(10, 125),
+				closeBoxMargin: '5px -20px 2px 2px',
+				closeBoxURL: "http://www.google.com/intl/en_us/mapfiles/close.gif",
+				isHidden: false,
+				alignBottom: true,
+				pane: 'floatPane',
+				enableEventPropagation: true
+			});
+
+
+		};
+
+    });

@@ -1400,7 +1400,7 @@
         multidate: false,
         multidateSeparator: ',',
         orientation: "auto",
-        rtl: false,
+        rtl: true,
         startDate: -Infinity,
         startView: 0,
         todayBtn: false,
