@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.ingressofacil.toni" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Ingresso Fácil</name>
+<widget id="com.ingressofacil.toni" version="2.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Prime Ingressos</name>
     <description>Ingressos </description>
     <author email="toniagne@gmail.com" href="http://garagee.com.br/">Toni Agne</author>
     <content src="index.html" />
