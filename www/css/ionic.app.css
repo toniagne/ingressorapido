@@ -10,6 +10,7 @@
   used under CC BY http://creativecommons.org/licenses/by/4.0/
   Modified icons to fit ionicon’s grid from original.
 */
+
 @font-face {
   font-family: "Ionicons";
   src: url("../lib/ionic/fonts/ionicons.eot?v=2.0.1");
@@ -8284,7 +8285,7 @@ ion-nav-bar.feed-color * {
     color: #FFFFFF; }
 
 .feed-view {
-  background-color: #4EBABA; }
+  background-color: #ffffff; }
   .feed-view .scroll-refresher * {
     color: #FFFFFF; }
   .feed-view .scroll-refresher .spinner {
