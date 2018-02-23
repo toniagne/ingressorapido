@@ -8285,11 +8285,11 @@ ion-nav-bar.feed-color * {
     color: #FFFFFF; }
 
 .feed-view {
-  background-color: #ffffff; }
+  background-color: #000000; }
   .feed-view .scroll-refresher * {
-    color: #FFFFFF; }
+    color: #000000; }
   .feed-view .scroll-refresher .spinner {
-    stroke: #FFFFFF; }
+    stroke: #000000; }
   .feed-view ion-infinite-scroll * {
     color: #FFFFFF; }
   .feed-view ion-infinite-scroll .spinner {
