@@ -41,6 +41,7 @@ if ($(window).width() <= 480) {
 	});
 }
 
+
 	/* Collapse filters */
 	if ($(this).width() < 991) {
 		$('.collapse#collapseFilters').removeClass('in');
@@ -49,6 +50,7 @@ if ($(window).width() <= 480) {
 		$('.collapse#collapseFilters').removeClass('out');
 		$('.collapse#collapseFilters').addClass('in');
 	}
+
 
 /* ==============================================
 	Overaly mask form + incrementer
@@ -97,7 +99,7 @@ $(function () {
 	$('.video').magnificPopup({
 		type: 'iframe'
 	}); /* video modal*/
-	$('.parallax-window').parallax({}); /* Parallax modal*/
+	$('.parallax-window').parallax({zIndex:1}); /* Parallax modal*/
 	// Image popups
 
 	$('.magnific-gallery').each(function () {
@@ -159,6 +161,10 @@ $(function () {
 		if ($button.text() == "+") {
 			var newVal = parseFloat(oldValue) + 1;
 		} else {
+		    if (oldValue == "") {
+		        newVal = 0;
+		    }
+            else
 			// Don't allow decrementing below zero
 			if (oldValue > 1) {
 				var newVal = parseFloat(oldValue) - 1;
@@ -167,7 +173,9 @@ $(function () {
 			}
 		}
 		$button.parent().find("input").val(newVal);
+		CalculateTotals();
 	});
+
 });
 
 /* Cat nav onclick active */
@@ -219,4 +227,14 @@ $('body').removeClass('has-fullscreen-modal')
 }),
 $(".search-overlay-menu, .search-overlay-menu .search-overlay-close").on("click keyup", function (a) {
 	(a.target == this || "search-overlay-close" == a.target.className || 27 == a.keyCode) && $(this).removeClass("open")
+});
+
+/* Date and time picker v2 */
+$('.booking_date').dateDropper();
+$('.booking_time').timeDropper({
+	setCurrentTime: false,
+	meridians: true,
+	primaryColor: "#e74e84",
+	borderColor: "#e74e84",
+	minutesInterval: '15'
 });

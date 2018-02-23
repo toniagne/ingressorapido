@@ -1,22 +1,36 @@
-// Ionic Starter App
+angular.module('underscore', [])
+.factory('_', function() {
+  return window._; // assumes underscore has already been loaded on the page
+});
 
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('your_app_name', [
+  'ionic',
+  'your_app_name.common.directives',
+  'your_app_name.app.controllers',
+  'your_app_name.auth.controllers',
+  'your_app_name.app.services',
+  'your_app_name.views',
+  'underscore',
+  'angularMoment'
+])
 
-.run(function($ionicPlatform) {
+
+// Enable native scrolls for Android platform only,
+// as you see, we're disabling jsScrolling to achieve this.
+.config(function ($ionicConfigProvider) {
+  if (ionic.Platform.isAndroid()) {
+    $ionicConfigProvider.scrolling.jsScrolling(false);
+  }
+})
+
+.run(function($ionicPlatform, $rootScope, $ionicHistory) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
-    if (window.cordova && window.cordova.plugins.Keyboard) {
+    if(window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-      cordova.plugins.Keyboard.disableScroll(true);
-
     }
-    if (window.StatusBar) {
-      // org.apache.cordova.statusbar required
+    if(window.StatusBar) {
       StatusBar.styleDefault();
     }
   });
@@ -25,83 +39,173 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    .state('app', {
-    url: '/app',
+  //SIDE MENU ROUTES
+  .state('app', {
+    url: "/app",
     abstract: true,
-    templateUrl: 'templates/menu.html',
+    templateUrl: "views/app/side-menu.html",
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.feed', {
+    url: "/feed",
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html',
-        controller: 'AppCtrl'
+        templateUrl: "views/app/feed.html",
+        controller: "FeedCtrl"
       }
     }
   })
 
-  .state('app.homefeed', {
-    url: '/homefeed',
+  .state('app.profile', {
+    abstract: true,
+    url: '/profile/:userId',
     views: {
       'menuContent': {
-        templateUrl: 'site/desh.html',
-        controller: 'AppCtrl'
+        templateUrl: "views/app/profile/profile.html",
+        controller: 'ProfileCtrl'
       }
     }
   })
 
-  .state('app.category', {
-    url: '/category',
+  .state('app.profile.posts', {
+    url: '/posts',
     views: {
-      'menuContent': {
-        templateUrl: 'templates/category.html',
-        controller: 'AppCtrl'
+      'profileContent': {
+        templateUrl: 'views/app/profile/profile.posts.html'
       }
     }
   })
 
-  .state('app.comment', {
-    url: '/comment',
+  .state('app.profile.likes', {
+    url: '/likes',
     views: {
-      'menuContent': {
-        templateUrl: 'templates/comment.html',
-        controller: 'AppCtrl'
+      'profileContent': {
+        templateUrl: 'views/app/profile/profile.likes.html'
       }
     }
   })
 
-  .state('app.add-comment', {
-    url: '/add-comment',
+  .state('app.settings', {
+    url: "/settings",
     views: {
       'menuContent': {
-        templateUrl: 'templates/add-comment.html',
-        controller: 'AppCtrl'
+        templateUrl: "views/app/profile/settings.html",
+        controller: 'SettingsCtrl'
       }
     }
   })
 
-  .state('forgot', {
-    url: '/forgot',
-    templateUrl: 'templates/forgot.html',
-    controller: 'AppCtrl'
-  })
-
-  .state('login', {
-    url: '/login',
-    templateUrl: 'templates/login.html'
-  })
-
-  .state('app.single', {
-    url: '/single',
+  .state('app.shop', {
+    url: "/shop",
+    abstract: true,
     views: {
       'menuContent': {
-        templateUrl: 'templates/single-post.html'
+        templateUrl: "views/app/shop/shop.html"
       }
     }
-  });
+  })
+
+  .state('app.shop.home', {
+    url: "/",
+    views: {
+      'shop-home': {
+        templateUrl: "views/app/shop/shop-home.html",
+        controller: 'ShopCtrl'
+      }
+    }
+  })
+
+  .state('app.shop.popular', {
+    url: "/popular",
+    views: {
+      'shop-popular': {
+        templateUrl: "views/app/shop/shop-popular.html",
+        controller: 'ShopCtrl'
+      }
+    }
+  })
+
+  .state('app.shop.sale', {
+    url: "/sale",
+    views: {
+      'shop-sale': {
+        templateUrl: "views/app/shop/shop-sale.html",
+        controller: 'ShopCtrl'
+      }
+    }
+  })
+
+  .state('app.cart', {
+    url: "/cart",
+    views: {
+      'menuContent': {
+        templateUrl: "views/app/shop/cart.html",
+        controller: 'ShoppingCartCtrl'
+      }
+    }
+  })
+
+  .state('app.shipping-address', {
+    url: "/shipping-address",
+    views: {
+      'menuContent': {
+        templateUrl: "views/app/shop/shipping-address.html",
+        controller: "CheckoutCtrl"
+      }
+    }
+  })
+
+  .state('app.checkout', {
+    url: "/checkout",
+    views: {
+      'menuContent': {
+        templateUrl: "views/app/shop/checkout.html",
+        controller: "CheckoutCtrl"
+      }
+    }
+  })
+
+  .state('app.product-detail', {
+    url: "/product/:productId",
+    views: {
+      'menuContent': {
+        templateUrl: "views/app/shop/product-detail.html",
+        controller: 'ProductCtrl'
+      }
+    }
+  })
+
+
+  //AUTH ROUTES
+  .state('facebook-sign-in', {
+    url: "/facebook-sign-in",
+    templateUrl: "views/auth/facebook-sign-in.html",
+    controller: 'WelcomeCtrl'
+  })
+
+  .state('dont-have-facebook', {
+    url: "/dont-have-facebook",
+    templateUrl: "views/auth/dont-have-facebook.html",
+    controller: 'WelcomeCtrl'
+  })
+
+  .state('create-account', {
+    url: "/create-account",
+    templateUrl: "views/auth/create-account.html",
+    controller: 'CreateAccountCtrl'
+  })
+
+  .state('welcome-back', {
+    url: "/welcome-back",
+    templateUrl: "views/auth/welcome-back.html",
+    controller: 'WelcomeBackCtrl'
+  })
+;
+
   // if none of the above states are matched, use this as the fallback
-  // $urlRouterProvider.otherwise('/app/homefeed');
-  $urlRouterProvider.otherwise('/app/homefeed');
-});
+  $urlRouterProvider.otherwise('/facebook-sign-in');
+  // $urlRouterProvider.otherwise('/app/feed');
+})
+
+;
