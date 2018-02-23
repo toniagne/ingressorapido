@@ -3153,7 +3153,7 @@ a.subdued {
     overflow: hidden;
     margin: 0 10px;
     min-width: 30px;
-    height: 43px;
+    height: 60px;
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -8275,8 +8275,9 @@ ion-nav-bar.settings-color * {
     font-size: 22px; }
 
 ion-nav-bar.feed-color ion-header-bar {
-  background-color: #4EBABA !important;
-  background: #4EBABA !important;
+  height: 60px;
+  background-color: #000000 !important;
+  background: #000000 !important;
   border: none !important;
   background-size: 0px !important; }
 ion-nav-bar.feed-color * {
