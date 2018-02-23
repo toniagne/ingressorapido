@@ -1,0 +1,41 @@
+<!-- SASS file: scss/app/menu.scss
+General Style file : scss/app/general.scss -->
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon-round" menu-toggle="left"></button>
+      </ion-nav-buttons>
+
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-ios-search-strong" ui-sref="app.search"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" class="app-sidemenu">
+    <ion-content>
+
+      <!-- Profile text and image -->
+      <div class="profile-details">
+        <h6 class="profile-salutation">Bem Vindo,</h6>
+        <h1 class="profile-title">Ingresso Rápido</h1>
+        <img class="profile-picture" src="img/login-logo.png" alt="">
+      </div>
+
+      <!-- Menu List. The closeMenu() can be found at www/js/controllers.js -->
+      <ion-list>
+        <ion-item ui-sref="app.homefeed">EVENTOS</ion-item>
+        <ion-item ng-click="closeMenu()" ui-sref="app.category">MEUS INGRESSOS</ion-item>
+        <ion-item  ui-sref="login">MINHA CONTA</ion-item>
+        <ion-item ng-click="closeMenu()" ui-sref="app.homefeed">FALE CONOSCO</ion-item>
+       
+      </ion-list>
+
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,65 @@
+<!-- SASS file: scss/app/login.scss
+General Style file : scss/app/general.scss -->
+<ion-view>
+  <ion-content class="login" scroll="false">
+    <!-- Header -->
+    <div class="bar bar-header bar-clear">
+      <h1 class="title">
+        <img src="img/login-logo.png" class="login-logo">
+      </h1>
+    </div>
+    <!-- End Header -->
+
+    <!-- Inline Tabs for the login and register sections -->
+    <ion-tabs class="app-tabs tabs-top">
+      <!-- First Tab, for login -->
+      <ion-tab title="Login">
+        <!-- Content Section for login -->
+        <ion-nav-view class="login-section">
+          <div class="login-tab-section">
+
+            <label class="item item-input animated fadeInDown">
+              <input type="text" placeholder="Usuário">
+            </label>
+
+            <label class="item item-input animated fadeInDown">
+              <input placeholder="Senha" type="password" ng-click="login()">
+            </label>
+
+            <button class="button button-light button-block animated fadeInDown delay-1s" ui-sref="app.homefeed">Entrar</button>
+            <button class="button button-light button-block" ui-sref="forgot">Esqueceu a senha ?</button>
+
+            <h6 class="app-divider login-divider">ou</h6>
+            <button class="button button-black button-block"><i class="icon ion-social-facebook"></i> Login com Facebook</button>
+          </div>
+        </ion-nav-view>
+        <!-- End Content Section for login -->
+      </ion-tab>
+
+      <!-- Second Tab, for register -->
+      <ion-tab title="Registre-se">
+        <!-- Content Section for second tab -->
+        <ion-nav-view class="login-section">
+          <div class="login-tab-section">
+
+            <label class="item item-input">
+              <input type="text" placeholder="Usuário">
+            </label>
+
+            <label class="item item-input">
+              <input placeholder="Senha" type="password">
+            </label>
+
+            <button class="button button-light button-block">Registrar</button>
+            <h6 class="app-divider login-divider">ou</h6>
+            <button class="button button-black button-block"><i class="icon ion-social-facebook"></i> Registrar com Facebook</button>
+
+          </div>
+        </ion-nav-view>
+        <!-- End Content section for second tab -->
+      </ion-tab>
+      <!-- End Second Tab for register -->
+
+    </ion-tabs>
+  </ion-content>
+</ion-view>
