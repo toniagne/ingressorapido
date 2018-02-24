@@ -5,25 +5,97 @@
   <ion-content overflow-scroll="true">
     <div class="product-card-content">
       <div class="item item-image">
-        <pre-img ratio="_1_1" helper-class="main-image">
-          <img ng-src="https://www.primeingressos.com.br/IMG/PrimeIndex_1.jpg" spinner-on-load>
+        <pre-img ratio="_3_2" helper-class="main-image">
+          <img ng-src="https://www.primeingressos.com.br/IMG/PrimeIndex_1.jpg" height="100%" spinner-on-load>
         </pre-img>
       </div>
+       <div class="item tabs">
+  <a class="tab-item">
+    INGRESSOS
+  </a>
+  <a class="tab-item">
+    INFORMAÇÕES
+  </a> 
+</div> 
       <div class="item item-body">
-        <h2 class="product-title">
-          Data: 02/03/2018<br>
-          Cidade: SAO LUIS M. B. - GO<br>
-          Local:  SAO LUIS M. B.<br>
-          Ponto(s) de Venda:  * PONTO 1<br>
-          Outras Informações: JEFFERSON MORAES EM SÃO LUIS DE MONTES BELOS - GO!! PRECISANDO BEBER COM EMERGÊNCIA!<br>
-        </h2> 
-        <p class="product-price" ng-click="showAddToCartPopup(product)">COMPRAR INGRESSO</p>
-      </div>
-      <div class="item item-body">
-        <p class="product-description"> 
-        23127 PISTA 2LT U MEIA  PISTA - PROMOCIONAL 15 %  R$ 40,00  <bR>
-        23560 FRONTSTAGE 3LT U MEIA FRONTSTAGE  15 %  R$ 60,00  <bR>
-        </p>
+       
+
+<table   class="table  ">
+             
+          <tbody>
+            <tr>
+              <td data-th="Product" colspan="3">
+                <div class="row"> 
+                  <div class="col-sm-10">
+                    <h4 class="nomargin">PISTA 2LT U MEIA</h4>
+                    <p>PISTA - PROMOCIONAL (15%)</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td data-th="Price">R$ 40.00</td>
+              <td data-th="Quantity">
+                <input type="number" class="form-control text-center" value="1">
+              </td> 
+              <td>
+                <ion-list>
+                <ion-radio ng-model="choice" ng-value="'A'"> <Br></ion-radio> 
+              </ion-list>
+               
+            </tr> 
+            </tr>
+
+            <tr>
+              <td data-th="Product" colspan="3">
+                <div class="row"> 
+                  <div class="col-sm-10">
+                    <h4 class="nomargin">FRONTSTAGE 3LT U MEIA</h4>
+                    <p>FRONTSTAGE (15%)</p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td data-th="Price">R$ 60.00</td>
+              <td data-th="Quantity">
+                <input type="number" class="form-control text-center" value="1">
+              </td> 
+              <td>
+                <ion-list>
+                <ion-radio ng-model="choice" ng-value="'B'"> <Br></ion-radio> 
+              </ion-list>
+               
+            </tr> 
+            </tr>
+          </tbody>
+
+
+
+
+
+          <tfoot>
+            <tr class="visible-xs">
+              <td class="text-center" colspan="3">
+                <hr><strong>Total 40.00</strong></td>
+            </tr>
+
+
+
+
+
+            <tr> 
+              <td class="hidden-xs text-center" colspan="3"><strong>Total $1.99</strong></td>
+            </tr>
+            <tr>
+              <td colspan="3"><a ng-click="showAddToCartPopup(product)" class="btn btn-success btn-block">FINALIZAR <i class="fa fa-angle-right"></i></a>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+
+
+
       </div>
     </div>
      
