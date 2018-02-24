@@ -80,12 +80,12 @@ angular.module('your_app_name.app.controllers', [])
     var myPopup = $ionicPopup.show({
       cssClass: 'add-to-cart-popup',
       templateUrl: 'views/app/shop/partials/add-to-cart-popup.html',
-      title: 'Add to Cart',
+      title: 'Comprar Ingresso',
       scope: $scope,
       buttons: [
         { text: '', type: 'close-popup ion-ios-close-outline' },
         {
-          text: 'Add to cart',
+          text: 'Comprar',
           onTap: function(e) {
             return $scope.data;
           }
@@ -95,7 +95,7 @@ angular.module('your_app_name.app.controllers', [])
     myPopup.then(function(res) {
       if(res)
       {
-        $ionicLoading.show({ template: '<ion-spinner icon="ios"></ion-spinner><p style="margin: 5px 0 0 0;">Adding to cart</p>', duration: 1000 });
+        $ionicLoading.show({ template: '<ion-spinner icon="ios"></ion-spinner><p style="margin: 5px 0 0 0;">Adicionando ao carrinho</p>', duration: 1000 });
         ShopService.addProductToCart(res.product);
         console.log('Item added to cart!', res);
       }
@@ -170,8 +170,8 @@ angular.module('your_app_name.app.controllers', [])
 
   $scope.removeProductFromCart = function(product) {
     $ionicActionSheet.show({
-      destructiveText: 'Remove from cart',
-      cancelText: 'Cancel',
+      destructiveText: 'Remover Item',
+      cancelText: 'Cancela',
       cancel: function() {
         return true;
       },
