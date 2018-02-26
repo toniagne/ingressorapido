@@ -63,8 +63,53 @@ angular.module('your_app_name.app.controllers', [])
 })
 
 
-.controller('ProductCtrl', function($scope, $stateParams, ShopService, $ionicPopup, $ionicLoading) {
+.controller('ProductCtrl', function($scope, $state, $stateParams, ShopService, $ionicPopup, $ionicLoading) {
   var productId = $stateParams.productId;
+   
+    $scope.ingresso = {
+        qtd: 0,
+        valor: 40.00
+      };
+    $scope.valor= "0,00";
+  $scope.somaItens = function(formIngressos, tipo, valor){ 
+   var i = 1;
+   //console.log(valor);
+   if (tipo == "menos" && formIngressos == 0){
+      $scope.ingresso = {
+        qtd: 0,
+        valor: 40.00
+      };
+   } else {
+     if (tipo == "menos"){
+      var resultado = formIngressos - i;
+      var valorsoma = valor * resultado;
+      var valorresul= valor - valorsoma;
+      console.log (valorsoma);
+      $scope.valor = valorsoma;
+      $scope.ingresso = {
+        qtd: resultado,
+        valor: valorsoma
+      };
+     }
+     else { 
+      var resultado = formIngressos + i;
+      var valorsoma = valor * resultado; 
+
+      $scope.ingresso = {
+        qtd: resultado,
+        valor: valorsoma
+      };
+      
+      $scope.valor = valorsoma;
+ 
+     }
+
+
+   }
+    
+
+  };
+
 
   ShopService.getProduct(productId).then(function(product){
     $scope.product = product;
@@ -98,6 +143,7 @@ angular.module('your_app_name.app.controllers', [])
         $ionicLoading.show({ template: '<ion-spinner icon="ios"></ion-spinner><p style="margin: 5px 0 0 0;">Adicionando ao carrinho</p>', duration: 1000 });
         ShopService.addProductToCart(res.product);
         console.log('Item added to cart!', res);
+        $state.go('app.cart');
       }
       else {
         console.log('Popup closed');

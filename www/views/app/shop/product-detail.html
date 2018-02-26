@@ -24,50 +24,41 @@
              
           <tbody>
             <tr>
-              <td data-th="Product" colspan="3">
+              <td>
                 <div class="row"> 
                   <div class="col-sm-10">
                     <h4 class="nomargin">PISTA 2LT U MEIA</h4>
                     <p>PISTA - PROMOCIONAL (15%)</p>
+                    <input type="hidden" value="PISTA - PROMOCIONAL (15%)" ng-model="ingresso['titulo']">
                   </div>
                 </div>
               </td>
             </tr>
             <tr>
-              <td data-th="Price">R$ 40.00</td>
-              <td data-th="Quantity">
-                <input type="number" class="form-control text-center" value="1">
-              </td> 
               <td>
-                <ion-list>
-                <ion-radio ng-model="choice" ng-value="'A'"> <Br></ion-radio> 
-              </ion-list>
-               
-            </tr> 
-            </tr>
-
-            <tr>
-              <td data-th="Product" colspan="3">
                 <div class="row"> 
-                  <div class="col-sm-10">
-                    <h4 class="nomargin">FRONTSTAGE 3LT U MEIA</h4>
-                    <p>FRONTSTAGE (15%)</p>
+                  <div class="col-sm-5">
+                    R$ 40.00
+                    <input type="hidden" value="1" ng-model="ingresso['id']">
+                    <input type="hidden" value="40" ng-model="ingresso['valor']">
+                  </div>
+                  <div class="col-sm-2">
+                   <a class="button ion-minus-circled"  ng-click="somaItens(ingresso.qtd, 'menos', ingresso.valor);" style="width:30px;"></a>
+                 </div>
+                 <div class="col-sm-2">
+             
+
+                <input type="number" value="3" ng-model="ingresso['qtd']"  class="form-control text-center" style="width:60px;" >
+                 </div>
+                 <div class="col-sm-2">
+                <a class="button ion-plus-circled" ng-click="somaItens(ingresso.qtd, 'mais', ingresso.valor);" style="width:30px;"></a>
+              </div>
                   </div>
                 </div>
-              </td>
-            </tr>
-            <tr>
-              <td data-th="Price">R$ 60.00</td>
-              <td data-th="Quantity">
-                <input type="number" class="form-control text-center" value="1">
               </td> 
-              <td>
-                <ion-list>
-                <ion-radio ng-model="choice" ng-value="'B'"> <Br></ion-radio> 
-              </ion-list>
-               
-            </tr> 
-            </tr>
+            </tr>  
+
+             
           </tbody>
 
 
@@ -77,7 +68,7 @@
           <tfoot>
             <tr class="visible-xs">
               <td class="text-center" colspan="3">
-                <hr><strong>Total 40.00</strong></td>
+                <hr><strong>Total {{valor}}</strong></td>
             </tr>
 
 
