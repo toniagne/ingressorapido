@@ -35,3 +35,10 @@
 	table#cart tfoot td .btn{display:block;}
 	
 }
+
+.tour_container{
+	width: 100%;
+}
+.img-responsive{
+	width: 90%;
+}
