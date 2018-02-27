@@ -85,7 +85,7 @@ angular.module('your_app_name.app.services', [])
         totalPages = 1,
         dfd = $q.defer();
 
-    $http.get('database.json').success(function(database) {
+    $http.jsonp('http://tap4.primeingressos.com.br/api/eventos/?callback=JSON_CALLBACK').success(function(database) {
 
       totalPosts = database.posts.length;
       totalPages = totalPosts/pageSize;
