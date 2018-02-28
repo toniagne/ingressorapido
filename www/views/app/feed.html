@@ -19,7 +19,7 @@
             
 
              
- 
+  
  
     <div ng-repeat="post in posts">
 
@@ -30,7 +30,7 @@
             <div class="ribbon_3 popular"><span>{{post.dataevento}}</span>
             </div>
             <div class="img_container">
-              <a ui-sref="app.product-detail">
+              <a ui-sref="app.product-detail({productId: post.cod_evento})">
                 <img src='https://www.primeingressos.com.br/IMG/{{post.imagembanner}}.jpg' class="img-responsive" alt="Image">
                 <div class="short_info">
                   <i class="icon_set_1_icon-44"></i>{{post.localevento}} 
