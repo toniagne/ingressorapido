@@ -6,9 +6,10 @@
     <div class="product-card-content">
       <div class="item item-image">
         <pre-img ratio="_3_2" helper-class="main-image">
-          <img ng-src="https://www.primeingressos.com.br/IMG/PrimeIndex_1.jpg" height="100%" spinner-on-load>
+          <img ng-src="https://www.primeingressos.com.br/IMG/{{product.evento.imagemsite}}.jpg" height="100%" spinner-on-load>
         </pre-img>
       </div>
+      
        <div class="item tabs">
   <a class="tab-item">
     INGRESSOS
@@ -19,17 +20,20 @@
 </div> 
       <div class="item item-body">
        
-
+        {{product.evento.descricaoevento}}<Br>
+        {{product.evento.detalhesevento}}
 <table   class="table  ">
              
-          <tbody>
+          <tbody ng-repeat="post in product.acentos_evento">
+
+
             <tr>
               <td>
                 <div class="row"> 
                   <div class="col-sm-10">
-                    <h4 class="nomargin">PISTA 2LT U MEIA</h4>
-                    <p>PISTA - PROMOCIONAL (15%)</p>
-                    <input type="hidden" value="PISTA - PROMOCIONAL (15%)" ng-model="ingresso['titulo']">
+                    <h4 class="nomargin">{{post.grupoambiente}}</h4>
+                    <p>Tipo:  {{post.tipo}}</p>
+                    <input type="hidden" value="{{post.grupoambiente}}" ng-model="ingresso['titulo']">
                   </div>
                 </div>
               </td>
@@ -38,9 +42,9 @@
               <td>
                 <div class="row"> 
                   <div class="col-sm-5">
-                    R$ 40.00
-                    <input type="hidden" value="1" ng-model="ingresso['id']">
-                    <input type="hidden" value="40" ng-model="ingresso['valor']">
+                    R$ {{post.valor}}
+                    <input type="hidden" value="{{post.cod_ambiente}}" ng-model="ingresso['id']">
+                    <input type="hidden" value="{{post.valor}}" ng-model="ingresso['valor']">
                   </div>
                   <div class="col-sm-2">
                    <a class="button ion-minus-circled"  ng-click="somaItens(ingresso.qtd, 'menos', ingresso.valor);" style="width:30px;"></a>

@@ -123,7 +123,7 @@ angular.module('your_app_name.app.services', [])
 
     var dfd = $q.defer();
     $http.jsonp('http://tap4.primeingressos.com.br/api/buscaeventos/'+productId+'/?callback=JSON_CALLBACK').success(function(database) {
-      var product = _.find(database.products, function(product){ return product._id == productId; });
+      var product = database;
 
       dfd.resolve(product);
     });
