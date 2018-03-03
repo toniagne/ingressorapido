@@ -130,7 +130,7 @@ angular.module('your_app_name.app.services', [])
     return dfd.promise;
   };
 
-  this.addProductToCart = function(productToAdd){
+  this.addProductToCart = function(productToAdd, qtd, valor){
     var cart_products = !_.isUndefined(window.localStorage.ionTheme1_cart) ? JSON.parse(window.localStorage.ionTheme1_cart) : [];
 
     //check if this product is already saved

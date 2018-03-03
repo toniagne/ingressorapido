@@ -109,9 +109,11 @@ angular.module('your_app_name.app.controllers', [])
     console.log(product, qtd, valor);
 
     $scope.data = {};
-    $scope.data.product = product;
-    $scope.data.productOption = 1;
-    $scope.data.productQuantity = 1;
+    $scope.data.product = product; 
+    $scope.data.productOption = qtd;
+    $scope.data.product.productQuantity = 1;
+    $scope.data.product.valor = valor;
+
 
     var myPopup = $ionicPopup.show({
       cssClass: 'add-to-cart-popup',
@@ -132,7 +134,7 @@ angular.module('your_app_name.app.controllers', [])
       if(res)
       {
         $ionicLoading.show({ template: '<ion-spinner icon="ios"></ion-spinner><p style="margin: 5px 0 0 0;">Adicionando ao carrinho</p>', duration: 1000 });
-        ShopService.addProductToCart(res.product);
+        ShopService.addProductToCart(res.product, qtd, valor);
         console.log('Item added to cart!', res);
         $state.go('app.cart');
       }
@@ -204,6 +206,8 @@ angular.module('your_app_name.app.controllers', [])
 
 .controller('ShoppingCartCtrl', function($scope, ShopService, $ionicActionSheet, _) {
   $scope.products = ShopService.getCartProducts();
+
+  console.log($scope.products);
 
   $scope.removeProductFromCart = function(product) {
     $ionicActionSheet.show({

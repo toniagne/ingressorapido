@@ -1,3 +1,4 @@
+
 <ion-view view-title="Carrinho de Compras" class="cart-view" cache-view="false">
   <ion-content>
     <div ng-if="products.length == 0">
@@ -10,28 +11,18 @@
       <div class="products-list">
         <div class="product-list-item" ng-repeat="product in products">
           <div class="row product-title-wrapper">
-            <span class="product-title">JEFFERSON MORAIS</span>
+            <span class="product-title">{{product.evento.descricaoevento}}</span>
           </div>
           <div class="row product-content-wrapper">
             <div class="col">
               <div class="product-picture">
                 <pre-img ratio="_1_1" helper-class="main-image">
-                  <img ng-src="https://www.primeingressos.com.br/IMG/PrimeIndex_1.jpg" spinner-on-load>
+                  <img ng-src="https://www.primeingressos.com.br/IMG/{{product.evento.imagemsite}}.jpg" spinner-on-load>
                 </pre-img>
               </div>
               <div class="product-options-wrapper">
-                <div class="row product-options">
-                  <div class="col col-75 select-option">
-                    <select >
-                      <option value="1">23127 PISTA 2LT U MEIA  PISTA - PROMOCIONAL 15 %  R$ 40,00</option>
-                      <option value="2">23560 FRONTSTAGE 3LT U MEIA FRONTSTAGE  15 %  R$ 60,00</option> 
-                    </select>
-                  </div>
-                  <div class="col col-25 select-option">
-                    <select >
-                      <option ng-repeat="i in [1,2,3,4,5,6,7,8,9,10]" value="{{i}}">{{i}}</option>
-                    </select>
-                  </div>
+                <div class="row product-options"> 
+                  
                 </div>
                 <div class="row remove-product-wrapper">
                   <div class="col col-center col-75">
@@ -42,7 +33,7 @@
                     </button>
                   </div>
                   <div class="col col-center col-25">
-                    <span class="product-price">${{product.price}}</span>
+                    <span class="product-price">R$ {{product.valor}}</span>
                   </div>
                 </div>
               </div>
