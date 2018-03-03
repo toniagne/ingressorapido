@@ -14,7 +14,7 @@
   <a class="tab-item">
     INGRESSOS
   </a>
-  <a class="tab-item">
+  <a class="tab-item" ng-click="showDetails(product)">
     INFORMAÇÕES
   </a> 
 </div> 
@@ -33,7 +33,8 @@
                   <div class="col-sm-10">
                     <h4 class="nomargin">{{post.grupoambiente}}</h4>
                     <p>Tipo:  {{post.tipo}}</p>
-                    <input type="hidden" value="{{post.grupoambiente}}" ng-model="ingresso['titulo']">
+                    <input type="hidden"  ng-model="ingresso.detalhe[key]">
+                    <input type="hidden"  ng-model="ingresso.valor[key]">
                   </div>
                 </div>
               </td>
@@ -45,7 +46,7 @@
                     R$ {{post.valor}}
                   </div>
                   <div class="col-sm-2">
-                   <a class="button ion-minus-circled"  ng-click="somaItens(ingresso.qtd, 'menos', post.valor, key);" style="width:30px;"></a>
+                   <a class="button ion-minus-circled"  ng-click="somaItens(ingresso.qtd, 'menos', post.valor, key, post.grupoambiente, ingresso.detalhe, ingresso.valor);" style="width:30px;"></a>
                  </div>
                  <div class="col-sm-2">
              
@@ -53,45 +54,26 @@
                 <input type="number"  ng-model="ingresso.qtd[key]"  class="form-control text-center" style="width:60px;" >
                  </div>
                  <div class="col-sm-2">
-                <a class="button ion-plus-circled" ng-click="somaItens(ingresso.qtd, 'mais', post.valor, key);" style="width:30px;"></a>
+                <a class="button ion-plus-circled" ng-click="somaItens(ingresso.qtd, 'mais', post.valor, key, post.grupoambiente, ingresso.detalhe, ingresso.valor);" style="width:30px;"></a>
               </div>
                   </div>
                 </div>
               </td> 
-            </tr>  
-
-             
-          </tbody>
-
-
-
-
-
-          <tfoot>
-            <tr class="visible-xs">
-              <td class="text-center" colspan="3">
-                <hr><strong>Total {{valor}}</strong></td>
-            </tr>
-
-
-
-
-
-            <tr> 
-              <td class="hidden-xs text-center" colspan="3"><strong>Total $1.99</strong></td>
-            </tr>
-            <tr>
-              <td colspan="3"><a ng-click="showAddToCartPopup(product, ingresso.qtd, valor)" class="btn btn-success btn-block">FINALIZAR <i class="fa fa-angle-right"></i></a>
-              </td>
-            </tr>
-          </tfoot>
+            </tr>   
+          </tbody> 
         </table>
 
 
 
       </div>
     </div>
-     
+      
      
   </ion-content>
 </ion-view>
+<ion-footer-bar> 
+  <h1 class="title">Total {{valor}}</h1>      
+  <div class="buttons">
+    <a ng-click="showAddToCartPopup(product, ingresso.qtd, valor, ingresso.detalhe)" class="btn btn-success btn-block">FINALIZAR <i class="fa fa-angle-right"></i></a>
+  </div>
+</ion-footer-bar>  

@@ -70,13 +70,14 @@ angular.module('your_app_name.app.controllers', [])
   
      
       $scope.ingresso = {
-        qtd: {0: 0, 1:0, 2:0, 3:0}
+        qtd: {0: 0, 1:0, 2:0, 3:0},
+        valor: {0: 0, 1:0, 2:0, 3:0},
+        detalhe: {0: 0, 1:0, 2:0, 3:0},
       };
   
-  $scope.somaItens = function(qtd, tipo, valor, ids){ 
+  $scope.somaItens = function(qtd, tipo, valor, ids, detalheSel, detalheForm, valorForm){ 
    var i = 1;
-   var valorForm = ShopService.guardaValor(somaValor);
-   //console.log(valor);
+ 
    if (tipo == "menos" && qtd == 0){
       
    } else {
@@ -89,11 +90,15 @@ angular.module('your_app_name.app.controllers', [])
        var somaQtd = qtd[ids] + i;
        var somaValor =  valor * somaQtd;  
      }
+     qtd[ids] = somaQtd;    
+     detalheForm[ids] = detalheSel;
+     valorForm[ids] = somaValor; 
 
-     qtd[ids] = somaQtd;
-    
-    $scope.valor =  somaValor;    
- 
+    var total = 0;  
+ for (var f = 0; f < 4; f++) {
+           total += valorForm[f];
+     }
+      $scope.valor =  total; 
    }
     
 
@@ -104,21 +109,48 @@ angular.module('your_app_name.app.controllers', [])
     $scope.product = product;
   });
 
+$scope.showDetails = function(product) {
+    console.log(product);
+
+      $scope.detalhesEvento = product;
+
+
+    var myPopup = $ionicPopup.show({
+      cssClass: 'add-to-cart-popup',
+      templateUrl: 'views/app/shop/partials/products-details.html',
+      title: 'DETALHES DO EVENTO',
+      scope: $scope,
+      buttons: [
+        { text: '', type: 'close-popup ion-ios-close-outline' } 
+      ]
+    });
+    myPopup.then(function(res) {
+      if(res)
+      {
+         
+      }
+      else {
+        console.log('Popup closed');
+      }
+    });
+  };
+
+
   // show add to cart popup on button click
-  $scope.showAddToCartPopup = function(product, qtd, valor) {
-    console.log(product, qtd, valor);
+  $scope.showAddToCartPopup = function(product, qtd, valor, descricao) {
+    console.log(product, qtd, valor, descricao);
 
     $scope.data = {};
     $scope.data.product = product; 
-    $scope.data.productOption = qtd;
-    $scope.data.product.productQuantity = 1;
+    $scope.quantidade = qtd;
+    $scope.descricao = descricao;
     $scope.data.product.valor = valor;
 
 
     var myPopup = $ionicPopup.show({
       cssClass: 'add-to-cart-popup',
       templateUrl: 'views/app/shop/partials/add-to-cart-popup.html',
-      title: 'Comprar Ingresso',
+      title: product.evento.descricaoevento,
       scope: $scope,
       buttons: [
         { text: '', type: 'close-popup ion-ios-close-outline' },

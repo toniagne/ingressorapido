@@ -1,6 +1,18 @@
-<span class="popup-product-title">{{data.product.evento.descricaoevento}}  - {{data.product.acentos_evento[0].grupoambiente}}</span>
-<span class="popup-product-price">R$ {{valor}}</span>
-<div class="separator-line"></div>
-<div class="row product-options">
-   
+
+<div ng-repeat="(key, post) in quantidade">
+	<div ng-if="post > 0">
+		<span class="popup-product-title"> 
+			<b>{{data.product.acentos_evento[key].grupoambiente}}</b>
+		</span>
+		<span class="popup-product-price">	
+			 <br>
+			 Quantidade: <b>{{post}}</b><br>
+			 Valor <b> R$ {{data.product.acentos_evento[key].valor}} </b>
+		</span>
+		<div class="separator-line"></div>
+		<div class="row product-options">
+		    
+		</div>
+	</div>
 </div>
+<h3>Valor Total: {{data.product.valor}}</h3>
