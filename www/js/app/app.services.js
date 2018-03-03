@@ -155,6 +155,10 @@ angular.module('your_app_name.app.services', [])
     window.localStorage.ionTheme1_cart = JSON.stringify(new_cart_products);
   };
 
+  this.guardaValor = function(valor){
+    return valor;
+  };
+
 })
 
 

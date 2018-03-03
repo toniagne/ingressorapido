@@ -66,45 +66,34 @@ angular.module('your_app_name.app.controllers', [])
 .controller('ProductCtrl', function($scope, $state, $stateParams, ShopService, $ionicPopup, $ionicLoading) {
   var productId = $stateParams.productId;
    
-    $scope.ingresso = {
-        qtd: 0,
-        valor: 40.00
-      };
-    $scope.valor= "0,00";
-  $scope.somaItens = function(formIngressos, tipo, valor){ 
-   var i = 1;
-   //console.log(valor);
-   if (tipo == "menos" && formIngressos == 0){
+
+  
+     
       $scope.ingresso = {
-        qtd: 0,
-        valor: 40.00
+        qtd: {0: 0, 1:0, 2:0, 3:0}
       };
+  
+  $scope.somaItens = function(qtd, tipo, valor, ids){ 
+   var i = 1;
+   var valorForm = ShopService.guardaValor(somaValor);
+   //console.log(valor);
+   if (tipo == "menos" && qtd == 0){
+      
    } else {
      if (tipo == "menos"){
-      var resultado = formIngressos - i;
-      var valorsoma = valor * resultado;
-      var valorresul= valor - valorsoma;
-      console.log (valorsoma);
-      $scope.valor = valorsoma;
-      $scope.ingresso = {
-        qtd: resultado,
-        valor: valorsoma
-      };
+       var somaQtd = qtd[ids] - i; 
+       var somaValor = valor * somaQtd;  
+
      }
      else { 
-      var resultado = formIngressos + i;
-      var valorsoma = valor * resultado; 
-
-      $scope.ingresso = {
-        qtd: resultado,
-        valor: valorsoma
-      };
-      
-      $scope.valor = valorsoma;
- 
+       var somaQtd = qtd[ids] + i;
+       var somaValor =  valor * somaQtd;  
      }
 
-
+     qtd[ids] = somaQtd;
+    
+    $scope.valor =  somaValor;    
+ 
    }
     
 
@@ -116,7 +105,9 @@ angular.module('your_app_name.app.controllers', [])
   });
 
   // show add to cart popup on button click
-  $scope.showAddToCartPopup = function(product) {
+  $scope.showAddToCartPopup = function(product, qtd, valor) {
+    console.log(product, qtd, valor);
+
     $scope.data = {};
     $scope.data.product = product;
     $scope.data.productOption = 1;
@@ -130,7 +121,7 @@ angular.module('your_app_name.app.controllers', [])
       buttons: [
         { text: '', type: 'close-popup ion-ios-close-outline' },
         {
-          text: 'Comprar',
+          text: 'ADD CARRINHO',
           onTap: function(e) {
             return $scope.data;
           }
