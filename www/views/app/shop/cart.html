@@ -21,10 +21,31 @@
                 </pre-img>
               </div>
               <div class="product-options-wrapper">
-                <div class="row product-options"> 
-                  
+
+                
+
+
+                <div class="row product-options" ng-repeat="(key, post) in product.quantidade"> 
+                
+                      <div ng-if="post > 0">
+                        <span class="popup-product-title"> 
+                          <b>{{product.acentos_evento[key].grupoambiente}}</b>
+                        </span>
+                        <span class="popup-product-price">  
+                           <br>
+                           Quantidade: <b>{{post}}</b><br>
+                          
+                        </span>
+                        <div class="separator-line"></div>
+                        <div class="row product-options">
+                            
+                        </div>
+                      </div>
+                    
                 </div>
-                <div class="row remove-product-wrapper">
+                
+              </div>
+              <div class="row remove-product-wrapper">
                   <div class="col col-center col-75">
                     <!-- <span class="remove-product-button" ng-click="removeProductFromCart({{product}})">Remove</span> -->
                     <!-- <span class="remove-product-button" ng-click="removeProductFromCart(product)">Remove</span> -->
@@ -33,10 +54,9 @@
                     </button>
                   </div>
                   <div class="col col-center col-25">
-                    <span class="product-price">R$ {{product.valor}}</span>
+                    <span class="product-price"> {{pcoduct.valor | currency:"R$"}}</span>
                   </div>
                 </div>
-              </div>
             </div>
           </div>
         </div>
@@ -46,7 +66,7 @@
         <span class="checkout-total-price section-action">R$ {{ getSubtotal() }}</span>
       </div>
       <div class="row padding">
-        <button class="button button-block button-energized checkout-btn" ui-sref="app.shipping-address">
+        <button class="button button-block button-energized checkout-btn" ui-sref="create-account">
           FINALIZAR A COMPRA
         </button>
       </div>

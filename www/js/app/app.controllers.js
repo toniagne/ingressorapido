@@ -146,6 +146,9 @@ $scope.showDetails = function(product) {
     $scope.descricao = descricao;
     $scope.data.product.valor = valor;
 
+    $scope.data.product.quantidade = qtd;
+    $scope.data.product.descricao = descricao; 
+
 
     var myPopup = $ionicPopup.show({
       cssClass: 'add-to-cart-popup',
@@ -239,8 +242,7 @@ $scope.showDetails = function(product) {
 .controller('ShoppingCartCtrl', function($scope, ShopService, $ionicActionSheet, _) {
   $scope.products = ShopService.getCartProducts();
 
-  console.log($scope.products);
-
+ 
   $scope.removeProductFromCart = function(product) {
     $ionicActionSheet.show({
       destructiveText: 'Remover Item',
@@ -257,7 +259,7 @@ $scope.showDetails = function(product) {
   };
 
   $scope.getSubtotal = function() {
-    return _.reduce($scope.products, function(memo, product){ return memo + product.price; }, 0);
+    return _.reduce($scope.products, function(memo, product){ return memo + product.valor; }, 0);
   };
 
 })

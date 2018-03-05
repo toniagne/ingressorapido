@@ -27,7 +27,7 @@
           
         
           <div class="tour_container">
-            <div class="ribbon_3 popular"><span>{{post.dataevento}}</span>
+            <div class="ribbon_3 popular"><span>{{post.dataevento | date:'d/M/yyyy'}} </span>
             </div>
             <div class="img_container">
               <a ui-sref="app.product-detail({productId: post.cod_evento})">
