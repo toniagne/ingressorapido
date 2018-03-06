@@ -12,7 +12,19 @@
            
         </div>
       </div>
+      
     </div>
+    <div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Usuário</span>
+    <input type="text" placeholder="Usuário">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Senha</span>
+    <input type="password" placeholder="Senha">
+  </label>
+   <input type="submit" class="sign-up button button-block"  value="LOGIN" ng-click="doSignUp()"/>
+</div>
     <div class="row form-separator">
       <hr class="separator-line"/>
       <span class="separator-mark">OU</span>
@@ -23,20 +35,43 @@
 
         <wizard on-finish="finishedWizard()" on-cancel="cancelledWizard()"> 
           <wz-step wz-title="Dados" wz-disabled="{{disabled}}">
-               <div class="list">
-  <label class="item item-input item-stacked-label">
-    <span class="input-label">First Name</span>
-    <input type="text" placeholder="John">
-  </label>
-  <label class="item item-input item-stacked-label">
-    <span class="input-label">Last Name</span>
-    <input type="text" placeholder="Suhr">
-  </label>
-  <label class="item item-input item-stacked-label">
-    <span class="input-label">Email</span>
-    <input type="text" placeholder="john@suhr.com">
-  </label>
-</div>
+                <div class="row form-wrapper">
+      <div class="col">
+          <div class="form-fields-outer list list-inset">
+            <div class="row multi-inputs">
+              <div class="col">
+                <label class="item item-input">
+                  <input class="multi-input" type="text" placeholder="Nome Completo" name="name" ng-model="user.name" required>
+                </label>
+              </div>
+            </div>
+             <div class="row multi-inputs">
+              <div class="col">
+            <label class="item item-input">
+              <input type="email" placeholder="Email" name="email" ng-model="user.email" required>
+            </label>
+          </div>
+          </div>
+           <div class="row multi-inputs">
+            <div class="col">
+            <label class="item item-input">
+              <input type="tel" placeholder="CPF" name="phone" ng-model="user.cpf" required>
+            </label>
+          </div>
+          </div>
+           <div class="row multi-inputs">
+            <div class="col">
+            <label class="item item-input">
+               <input class="multi-input" type="date" placeholder="Data Nascimento" name="name" ng-model="user.datanascimento" required>
+            </label>
+          </div>
+          </div>
+            
+          </div>
+ 
+              <input type="submit" class="sign-up button button-block" wz-next value="PRÓXIMO" />
+                  </div>
+    </div>
           </wz-step>
           <wz-step wz-title="Endereços">
              <div class="row form-wrapper">
