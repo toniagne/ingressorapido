@@ -34,9 +34,11 @@ angular.module('your_app_name.auth.controllers', [])
 })
 
 .controller('CreateAccountCtrl', function($scope, $state){
-	$scope.doSignUp = function(){
-		console.log("doing sign up");
-		$state.go('app.feed');
+	$scope.doSignUp = function(forms){
+		console.log($scope.user);
+		    
+    $state.go('checkin');
+
 	};
 })
 

@@ -1,0 +1,55 @@
+<ion-view class="auth-view" cache-view="false">
+  <ion-nav-bar class="view-navigation">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-content >
+    <div class="row form-heading">
+      <div class="col">
+        <h1 class="form-title">PAGAMENTO</h1>
+       
+        <div class="social-sign-up button-bar">
+           <img src="img/visa.png" width="20%" height="20%">
+           <img src="img/master.jpg" width="20%" height="20%">
+        </div>
+      </div>
+    </div>
+     <div class="row form-wrapper">
+      <div class="col">
+       <form name="signup_form" class="" novalidate>
+          <div class="form-fields-outer list list-inset">
+            <div class="row multi-inputs">
+              <div class="col">
+                <label class="item item-input">
+                  <input class="multi-input" type="text" placeholder="Nome Utilizador" name="name" ng-model="user.nameutiliador" required>
+                </label>
+              </div>
+            </div>
+            <div class="row multi-inputs">
+              <div class="col">
+            <label class="item item-input">
+              <input type="text" placeholder="CPF Utilizador" name="email" ng-model="user.email" required>
+            </label>
+          </div></div>
+          <div class="row multi-inputs">
+              <div class="col">
+            <label class="item item-input">
+              <input type="tel" placeholder="Numero Cartão" name="phone" ng-model="user.phone" required>
+            </label>
+          </div></div>
+          <div class="row multi-inputs">
+              <div class="col">
+            <label class="item item-input" show-hide-container>
+              <input type="password" placeholder="Senha" name="password" ng-model="user.password" required show-hide-input>
+            </label>
+          </div></div>
+            <button type="submit" class="sign-up button button-block" ng-click="doSignUp()" ng-disabled="signup_form.$invalid">
+              Acessar
+            </button>
+            <p ng-show="error" class="message error">{{error}}</p>
+          </div>
+        </form>
+      </div></div>
+  
+  </ion-content>
+</ion-view>

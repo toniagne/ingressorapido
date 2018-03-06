@@ -11,7 +11,8 @@ angular.module('your_app_name', [
   'your_app_name.app.services',
   'your_app_name.views',
   'underscore',
-  'angularMoment'
+  'angularMoment',
+  'mgo-angular-wizard'
 ])
 
 
@@ -193,6 +194,12 @@ angular.module('your_app_name', [
   .state('create-account', {
     url: "/create-account",
     templateUrl: "views/auth/create-account.html",
+    controller: 'CreateAccountCtrl'
+  })
+
+   .state('checkin', {
+    url: "/checkin",
+    templateUrl: "views/auth/checkin.html",
     controller: 'CreateAccountCtrl'
   })
 
