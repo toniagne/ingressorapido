@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.ingressofacil.toni" version="2.0.22" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.ingressofacil.toni" version="2.0.23" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Prime Ingressos</name>
     <description>Ingressos </description>
     <author email="toniagne@gmail.com" href="http://garagee.com.br/">Toni Agne</author>
@@ -90,7 +90,8 @@
     <plugin name="cordova-plugin-statusbar" spec="2.2.1" />
     <plugin name="cordova-plugin-device" spec="1.1.4" />
     <plugin name="cordova-plugin-splashscreen" spec="~4.0.1" />
-        <plugin name="phonegap-plugin-push" spec="~1.10.0">
+    <plugin name="phonegap-plugin-push" spec="~1.10.0">
         <variable name="SENDER_ID" value="AAAAsyggYvQ:APA91bHVj_VlViC7oAXIsNSCGMQ4Mx1rLmRLY44-HL8XpqSYo0jdOwm_4YAlFSUc9_Xgl3S6eckGNd-PduRnnSnWy3XsmUpflamHbESs_Y1--F_e56XXNESOq8R8mfU97Ssnv6ML3QCb" />
     </plugin>
+    <plugin name="com.phonegap.plugins.barcodescanner" spec="2.0.0" source="pgb" />
 </widget>
