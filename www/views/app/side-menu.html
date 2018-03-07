@@ -19,7 +19,27 @@
     <ion-content has-bouncing="false" scroll="false" class="menu-outer left-menu">
       <div multi-bg="['img/menu-bg.jpeg']">
         <div class="row menu-top-options">
-          <div class="col col-top">
+          
+          <div class="col" style="margin-top: -90%;">
+            <div class="row menu-bottom-options">
+          <div class="col col-bottom">
+            <ion-list>
+              <ion-item class="user-item" menu-close ui-sref="app.profile.posts({userId:loggedUser._id})">
+                <!-- We need a wrapper with width set for the preload image directive -->
+                <div class="user-image-outer">
+                  <pre-img ratio="_1_1" helper-class="rounded-image">
+                    <img class="user-image" ng-src="{{loggedUser.picture}}" spinner-on-load>
+                  </pre-img>
+                </div>
+                <h2 class="menu-text">{{loggedUser.name}}</h2>
+                <div class="user-inbox">
+                  <i class="menu-icon icon ion-ios-filing"></i>
+                   
+                </div>
+              </ion-item> 
+            </ion-list>
+          </div>
+        </div>
             <ion-list>
               <ion-item ui-sref-active="active" class="item-icon-left" menu-close ui-sref="app.feed">
                 <i class="menu-icon icon ion-ios-world"></i>
@@ -36,25 +56,7 @@
             </ion-list>
           </div>
         </div>
-        <div class="row menu-bottom-options">
-          <div class="col col-bottom">
-            <ion-list>
-              <ion-item class="user-item" menu-close ui-sref="app.profile.posts({userId:loggedUser._id})">
-                <!-- We need a wrapper with width set for the preload image directive -->
-                <div class="user-image-outer">
-                  <pre-img ratio="_1_1" helper-class="rounded-image">
-                    <img class="user-image" ng-src="{{loggedUser.picture}}" spinner-on-load>
-                	</pre-img>
-                </div>
-                <h2 class="menu-text">{{loggedUser.name}}</h2>
-                <div class="user-inbox">
-                  <i class="menu-icon icon ion-ios-filing"></i>
-                   
-                </div>
-              </ion-item> 
-            </ion-list>
-          </div>
-        </div>
+        
       </div>
     </ion-content>
   </ion-side-menu>

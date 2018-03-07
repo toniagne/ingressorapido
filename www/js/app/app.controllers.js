@@ -3,23 +3,15 @@ angular.module('your_app_name.app.controllers', [])
 
 .controller('AppCtrl', function($scope, AuthService) {
 
-  //this will represent our logged user
-  var user = {
-    about: "Design Lead of Project Fi. Love adventures, green tea, and the color pink.",
-    name: "Nome Teste",
-    picture: "https://s3.amazonaws.com/uifaces/faces/twitter/brynn/124.jpg",
-    _id: 0,
-    followers: 345,
-    following: 58
-  };
+ 
+  
+  $scope.loggedUser = AuthService.getLoggedUser();
 
-  //save our logged user on the localStorage
-  AuthService.saveUser(user);
-  $scope.loggedUser = user;
+  console.log(AuthService.getLoggedUser());
 })
 
 
-.controller('ProfileCtrl', function($scope, $stateParams, PostService, $ionicHistory, $state, $ionicScrollDelegate) {
+.controller('ProfileCtrl', function($scope, $stateParams, PostService, AuthService, $ionicHistory, $state, $ionicScrollDelegate) {
 
   $scope.$on('$ionicView.afterEnter', function() {
     $ionicScrollDelegate.$getByHandle('profile-scroll').resize();
@@ -30,7 +22,7 @@ angular.module('your_app_name.app.controllers', [])
   $scope.myProfile = $scope.loggedUser._id == userId;
   $scope.posts = [];
   $scope.likes = [];
-  $scope.user = {};
+  $scope.user = AuthService.getLoggedUser();
 
   PostService.getUserPosts(userId).then(function(data){
     $scope.posts = data;
@@ -239,10 +231,19 @@ $scope.showDetails = function(product) {
 })
 
 
-.controller('ShoppingCartCtrl', function($scope, ShopService, $ionicActionSheet, _) {
+.controller('ShoppingCartCtrl', function($scope, $state, AuthService, ShopService, $ionicActionSheet, _) {
   $scope.products = ShopService.getCartProducts();
 
- 
+ $scope.concluiCompra = function() {
+    if (AuthService.getLoggedUser() == 0){
+      $state.go('welcome-back');
+
+    } else {
+      $state.go('checkin');
+    }
+ };
+
+
   $scope.removeProductFromCart = function(product) {
     $ionicActionSheet.show({
       destructiveText: 'Remover Item',

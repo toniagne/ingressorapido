@@ -33,11 +33,46 @@ angular.module('your_app_name.auth.controllers', [])
   };
 })
 
-.controller('CreateAccountCtrl', function($scope, $state){
+.controller('CreateAccountCtrl', function($scope, $state, $timeout, AuthService, $ionicSlideBoxDelegate){
+
+  $scope.next = function(){
+    $ionicSlideBoxDelegate.next();
+  }
+  $scope.back = function(){
+    $ionicSlideBoxDelegate.previous();
+  } 
+  
+  $scope.slide = -1;
+  $scope.slides = [];
+  $timeout(function(){
+    $scope.$watch(function(){
+        return $ionicSlideBoxDelegate.currentIndex();
+    }, function(index){
+
+      $scope.errorMessage = "";
+
+      //Initial state, don't validate
+      if($scope.slide < 0){
+        $scope.slide = 0;
+        return;
+      }
+
+      if($scope.slides[$scope.slide].isValid()){
+        $scope.slide = index;
+        return;
+      } else {
+        $ionicSlideBoxDelegate.slide($scope.slide);
+        $scope.errorMessage = $scope.slides[$scope.slide].errorMessage;
+      }
+
+    });
+  },0);
+
+
 	$scope.doSignUp = function(forms){
-		console.log($scope.user);
-		    
-    $state.go('checkin');
+		//console.log(forms);
+		    AuthService.saveUser(forms);
+        $state.go('checkin');
 
 	};
 })

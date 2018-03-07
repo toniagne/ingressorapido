@@ -13,29 +13,14 @@
         </div>
       </div>
       
-    </div>
-    <div class="list">
-  <label class="item item-input item-stacked-label">
-    <span class="input-label">Usuário</span>
-    <input type="text" placeholder="Usuário">
-  </label>
-  <label class="item item-input item-stacked-label">
-    <span class="input-label">Senha</span>
-    <input type="password" placeholder="Senha">
-  </label>
-   <input type="submit" class="sign-up button button-block"  value="LOGIN" ng-click="doSignUp()"/>
-</div>
-    <div class="row form-separator">
-      <hr class="separator-line"/>
-      <span class="separator-mark">OU</span>
+    </div> 
+     
 
-      <hr class="separator-line"/>
-    </div>
-    <h3 class="form-sub-title">Cadastre-se preenchendo os dados abaixo</h3>
 
-        <wizard on-finish="finishedWizard()" on-cancel="cancelledWizard()"> 
-          <wz-step wz-title="Dados" wz-disabled="{{disabled}}">
-                <div class="row form-wrapper">
+      <ion-slide-box show-pager="false">
+      <ion-slide>
+        <div class="box">
+          <div class="row form-wrapper">
       <div class="col">
           <div class="form-fields-outer list list-inset">
             <div class="row multi-inputs">
@@ -67,14 +52,15 @@
           </div>
           </div>
             
-          </div>
- 
-              <input type="submit" class="sign-up button button-block" wz-next value="PRÓXIMO" />
+          </div> 
+              <input type="submit" class="sign-up button button-block"  value="PRÓXIMO"  ng-click="next()"/>
                   </div>
     </div>
-          </wz-step>
-          <wz-step wz-title="Endereços">
-             <div class="row form-wrapper">
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box">
+          <div class="row form-wrapper">
                   <div class="col">
                       <div class="form-fields-outer list list-inset">
                         <div class="row multi-inputs">
@@ -107,12 +93,14 @@
             
           </div>
  
-              <input type="submit" class="sign-up button button-block" wz-next value="PRÓXIMO" />
+              <input type="submit" class="sign-up button button-block" ng-click="next()" value="PRÓXIMO" />
                   </div>
-            </div> 
-          </wz-step>
-          <wz-step wz-title="Fones">
-             <div class="row form-wrapper">
+            </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box">
+          <div class="row form-wrapper">
               <div class="col">
                   <div class="form-fields-outer list list-inset">
                     <div class="row multi-inputs">
@@ -137,12 +125,14 @@
                       </div>
                     </div>
  
-              <input type="submit" class="sign-up button button-block" wz-next value="PRÓXIMO" />
+              <input type="submit" class="sign-up button button-block" ng-click="next()" value="PRÓXIMO" />
                   </div>
     </div> </div>
-          </wz-step>
-          <wz-step wz-title="Senha">
-             <div class="row form-wrapper">
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box">
+          <div class="row form-wrapper">
               <div class="col">
                   <div class="form-fields-outer list list-inset">
                     <div class="row multi-inputs">
@@ -165,12 +155,18 @@
                   </div>
     </div> </div>
     <input type="submit" class="sign-up button button-block" value="FINALIZAR" ng-click="doSignUp(user)" />
-          </wz-step>
-      </wizard>
-
+        </div>
+      </ion-slide>
+    </ion-slide-box>
 
 
         
+
+
+
+      <ion-footer-bar>
+     
+  </ion-footer-bar>  
   
   </ion-content>
 </ion-view>

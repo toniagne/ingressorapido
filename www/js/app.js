@@ -211,8 +211,8 @@ angular.module('your_app_name', [
 ;
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/facebook-sign-in');
-  // $urlRouterProvider.otherwise('/app/feed');
+  //$urlRouterProvider.otherwise('/facebook-sign-in');
+   $urlRouterProvider.otherwise('/app/feed');
 })
 
 ;
