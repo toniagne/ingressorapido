@@ -3,11 +3,13 @@ angular.module('your_app_name.app.controllers', [])
 
 .controller('AppCtrl', function($scope, AuthService) {
 
- 
+ if (AuthService.getLoggedUser() == 0){
+  AuthService.saveUser(0);
+ } else {
+  console.log("usa o q tem");
+ }
   
-  $scope.loggedUser = AuthService.getLoggedUser();
-
-  console.log(AuthService.getLoggedUser());
+  $scope.loggedUser = AuthService.getLoggedUser(); 
 })
 
 
