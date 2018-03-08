@@ -77,10 +77,17 @@ angular.module('your_app_name.auth.controllers', [])
 	};
 })
 
-.controller('WelcomeBackCtrl', function($scope, $state, $ionicModal){
-	$scope.doLogIn = function(){
-		console.log("doing log in");
-		$state.go('app.feed');
+.controller('WelcomeBackCtrl', function($scope, $state, $ionicModal, AuthService){
+
+  var senha = {nome: 'admin', senha: '123mudar'};
+
+	$scope.doLogIn = function(forms){
+		 if (forms.userName == senha.nome){ 
+      AuthService.saveUser(senha);
+      $state.go('checkin');
+    } else {
+      alert('Você digitou o usuário ou senha incorretos.')
+    }
 	};
 
 	$ionicModal.fromTemplateUrl('views/auth/forgot-password.html', {

@@ -2,8 +2,7 @@ angular.module('your_app_name.app.controllers', [])
 
 
 .controller('AppCtrl', function($scope, AuthService) {
-
-  
+ 
   $scope.loggedUser = AuthService.getLoggedUser(); 
 
   console.log(AuthService.getLoggedUser());
@@ -18,6 +17,7 @@ angular.module('your_app_name.app.controllers', [])
 
   var userId = $stateParams.userId;
 
+  $scope.dadosUser = AuthService.getLoggedUser();
   $scope.myProfile = $scope.loggedUser._id == userId;
   $scope.posts = [];
   $scope.likes = [];

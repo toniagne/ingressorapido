@@ -14,7 +14,7 @@
         </div>
       </div>
     </div>
-    <div class="row form-separator" style="margin-top: 40px;">
+    <div class="row form-separator" style="margin-top: 45px;">
 
       <hr class="separator-line"/>
       <span class="separator-mark">OU</span>
@@ -30,7 +30,7 @@
             <label class="item item-input" show-hide-container>
               <input type="password" placeholder="Senha" name="password" ng-model="user.password" required show-hide-input>
             </label>
-            <button type="submit" class="login button button-block" ng-click="doLogIn()" ng-disabled="login_form.$invalid">
+            <button type="submit" class="login button button-block" ng-click="doLogIn(user)" ng-disabled="login_form.$invalid">
               Login
             </button>
             <p ng-show="error" class="message error">{{error}}</p>
